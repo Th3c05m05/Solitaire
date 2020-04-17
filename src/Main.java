@@ -8,64 +8,64 @@ public class Main {
     public static void makeDeck(){
 
         //Adds all the Spades
-        deck.add("13S");
-        deck.add("12S");
-        deck.add("11S");
-        deck.add("10S");
-        deck.add("9S");
-        deck.add("8S");
-        deck.add("7S");
-        deck.add("6S");
-        deck.add("5S");
-        deck.add("4S");
-        deck.add("3S");
-        deck.add("2S");
-        deck.add("1S");
+        deck.add("13SB"); //king
+        deck.add("12SB"); //queen
+        deck.add("11SB"); //jack
+        deck.add("10SB");
+        deck.add("9SB");
+        deck.add("8SB");
+        deck.add("7SB");
+        deck.add("6SB");
+        deck.add("5SB");
+        deck.add("4SB");
+        deck.add("3SB");
+        deck.add("2SB");
+        deck.add("1SB"); //ace
 
         //Adds all the Clubs
-        deck.add("13C");
-        deck.add("12C");
-        deck.add("11C");
-        deck.add("10C");
-        deck.add("9C");
-        deck.add("8C");
-        deck.add("7C");
-        deck.add("6C");
-        deck.add("5C");
-        deck.add("4C");
-        deck.add("3C");
-        deck.add("2C");
-        deck.add("1C");
+        deck.add("13CB"); //king
+        deck.add("12CB"); //queen
+        deck.add("11CB"); //jack
+        deck.add("10CB");
+        deck.add("9CB");
+        deck.add("8CB");
+        deck.add("7CB");
+        deck.add("6CB");
+        deck.add("5CB");
+        deck.add("4CB");
+        deck.add("3CB");
+        deck.add("2CB");
+        deck.add("1CB"); //ace
 
         //Adds all the Diamonds
-        deck.add("13D");
-        deck.add("12D");
-        deck.add("11D");
-        deck.add("10D");
-        deck.add("9D");
-        deck.add("8D");
-        deck.add("7D");
-        deck.add("6D");
-        deck.add("5D");
-        deck.add("4D");
-        deck.add("3D");
-        deck.add("2D");
-        deck.add("1D");
+        deck.add("13DR"); //king
+        deck.add("12DR"); //queen
+        deck.add("11DR"); //jack
+        deck.add("10DR");
+        deck.add("9DR");
+        deck.add("8DR");
+        deck.add("7DR");
+        deck.add("6DR");
+        deck.add("5DR");
+        deck.add("4DR");
+        deck.add("3DR");
+        deck.add("2DR");
+        deck.add("1DR"); //ace
 
         //Adds all the Hearts
-        deck.add("13H");
-        deck.add("12H");
-        deck.add("11H");
-        deck.add("10H");
-        deck.add("9H");
-        deck.add("8H");
-        deck.add("7H");
-        deck.add("6H");
-        deck.add("5H");
-        deck.add("4H");
-        deck.add("3H");
-        deck.add("2H");
-        deck.add("1H");
+        deck.add("13HR"); //king
+        deck.add("12HR"); //queen
+        deck.add("11HR"); //jack
+        deck.add("10HR");
+        deck.add("9HR");
+        deck.add("8HR");
+        deck.add("7HR");
+        deck.add("6HR");
+        deck.add("5HR");
+        deck.add("4HR");
+        deck.add("3HR");
+        deck.add("2HR");
+        deck.add("1HR"); //jack
 
         //Shuffles Deck
         Collections.shuffle(deck);
@@ -80,7 +80,6 @@ public class Main {
 
                 deck.remove(0);
             }
-
         }
 
         for (String[] strings : field) {
