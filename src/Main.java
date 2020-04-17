@@ -3,6 +3,7 @@ import java.util.*;
 public class Main {
 
     static ArrayList<String> deck = new ArrayList<String>();
+    static String [][] field = new String[13][7];
 
     public static void makeDeck(){
 
@@ -70,12 +71,21 @@ public class Main {
         Collections.shuffle(deck);
     }
 
-    public static void placeCards(){
+    public static void setField(){
 
         for(int a = 0; a < 7; a++){
-            for (int b = 7; b > a; b--){
-                System.out.print(deck.get(0) + " ");
+            for(int b = 0; b <= a; b++){
+
+                field[b][a] = deck.get(0);
+
                 deck.remove(0);
+            }
+
+        }
+
+        for (String[] strings : field) {
+            for (int d = 0; d < field[0].length; d++) {
+                System.out.print(strings[d] + " ");
             }
             System.out.println("");
         }
