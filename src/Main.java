@@ -1,9 +1,10 @@
 import java.util.*;
 
-public class Main {
+public class Main extends User{
 
     static ArrayList<String> deck = new ArrayList<String>();
     static String [][] field = new String[13][7];
+    static String [][] finals = new String[13][4];
 
     public static void makeDeck(){
 
@@ -79,13 +80,12 @@ public class Main {
                 field[b][a] = deck.get(0);
 
                 deck.remove(0);
+
             }
         }
 
         for (String[] strings : field) {
-            for (int d = 0; d < field[0].length; d++) {
-                System.out.print(strings[d] + " ");
-            }
+            for (int d = 0; d < field[0].length; d++) { System.out.print(strings[d] + " "); }
             System.out.println("");
         }
 
