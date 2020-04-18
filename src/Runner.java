@@ -3,5 +3,6 @@ public class Runner extends Main{
         makeDeck();
         setField();
         test();
+        System.out.println("fuck avi");
     }
 }
