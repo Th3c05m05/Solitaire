@@ -4,5 +4,5 @@ public class Runner extends Main{
         setField();
         test();
         System.out.println("fuck avi");
-    }
+}
 }
