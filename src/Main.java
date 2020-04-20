@@ -23,6 +23,8 @@ public class Main extends User{
         deck.add("02SB");
         deck.add("01SB"); //ace
 
+        System.out.println("test");
+
         //Adds all the Clubs
         deck.add("13CB"); //king
         deck.add("12CB"); //queen
