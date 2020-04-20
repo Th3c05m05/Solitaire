@@ -53,7 +53,7 @@ public class User{
         switch(a){
             case 1:
                 try{
-                    while( checkNull(c1length, 0) ){
+                    while( checkNull(0, c1length) ){
                         c1length ++;
                     }
                 }catch(Exception a1){ c1length = 0; }
@@ -61,7 +61,7 @@ public class User{
 
             case 2:
                 try{
-                    while( checkNull(c2length, 0) ){
+                    while( checkNull(0, c2length) ){
                         c2length ++;
                     }
                 }catch(Exception a2){ c2length = 0; }
@@ -69,7 +69,7 @@ public class User{
 
             case 3:
                 try{
-                    while( checkNull(c3length, 0) ){
+                    while( checkNull(0, c3length) ){
                         c3length ++;
                     }
                 }catch(Exception a3){ c3length = 0; }
@@ -77,7 +77,7 @@ public class User{
 
             case 4:
                 try{
-                    while( checkNull(c4length, 0) ){
+                    while( checkNull(0, c4length) ){
                         c4length ++;
                     }
                 }catch(Exception a3){ c4length = 0; }
@@ -85,7 +85,7 @@ public class User{
 
             case 5:
                 try{
-                    while( checkNull(c5length, 0) ){
+                    while( checkNull(0, c5length) ){
                         c5length ++;
                     }
                 }catch(Exception a3){ c5length = 0; }
@@ -93,7 +93,7 @@ public class User{
 
             case 6:
                 try{
-                    while( checkNull(c6length, 0) ){
+                    while( checkNull(0, c6length) ){
                         c6length ++;
                     }
                 }catch(Exception a6){ c6length = 0; }
@@ -101,7 +101,7 @@ public class User{
 
             case 7:
                 try{
-                    while( checkNull(c7length, 0) ){
+                    while( checkNull(0, c7length) ){
                         c7length ++;
                     }
                 }catch(Exception a7){ c7length = 0; }
