@@ -66,7 +66,7 @@ public class Main extends User{
         deck.add("04HR");
         deck.add("03HR");
         deck.add("02HR");
-        deck.add("01HR"); //jack
+        deck.add("01HR"); //ace
 
         //Shuffles Deck
         Collections.shuffle(deck);
@@ -75,27 +75,17 @@ public class Main extends User{
     public static void setField(){
 
         for(int a = 0; a < 7; a++){
-
             for(int b = 0; b <= a; b++){
-
                 field[b][a] = deck.get(0);
-
                 deck.remove(0);
-
             }
         }
 
         for (String[] strings : field) {
-
             for (int d = 0; d < field[0].length; d++) {
-
                 System.out.print(strings[d] + " ");
-
             }
-
             System.out.println("");
-
         }
-
     }
 }
