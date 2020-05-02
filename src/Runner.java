@@ -3,6 +3,6 @@ public class Runner extends Main{
         makeDeck();
         setField();
         move();
-        System.out.println("fuck avi");
+
     }
 }
