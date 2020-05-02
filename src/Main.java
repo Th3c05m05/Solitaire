@@ -1,12 +1,13 @@
 import java.util.*;
 
-public class Main extends User{
-
+public class Main extends User {
+    static int x = 5;//this process is ongoing
     static ArrayList<String> deck = new ArrayList<String>();
-    static String [][] field = new String[13][7];
-    static String [][] finals = new String[13][4];
+    static String[][] field = new String[13][7];
+    static String[][] finals = new String[x][4];//this finals or ace pile shouldn't have definite constant(13). it should be a variable
 
-    public static void makeDeck(){
+
+    public static void makeDeck() {
 
         //Adds all the Spades
         deck.add("13SB"); //king
@@ -72,10 +73,10 @@ public class Main extends User{
         Collections.shuffle(deck);
     }
 
-    public static void setField(){
+    public static void setField() {
 
-        for(int a = 0; a < 7; a++){
-            for(int b = 0; b <= a; b++){
+        for (int a = 0; a < 7; a++) {
+            for (int b = 0; b <= a; b++) {
 
                 field[b][a] = deck.get(0);
 
@@ -85,7 +86,22 @@ public class Main extends User{
         }
 
         for (String[] strings : field) {
-            for (int d = 0; d < field[0].length; d++) { System.out.print(strings[d] + " "); }
+            for (int d = 0; d < field[0].length; d++) {
+                System.out.print(strings[d] + " ");
+            }
+            System.out.println("");
+        }
+
+    }
+
+    public void compareToCards(ArrayList deck, String[][] field, String[][] finals) {//compareTo method
+        System.out.println(deck);
+        //this set of if-statements will compare deck to cards faced up on the field
+
+        for (String[] strings : field) {
+            for (int d = 0; d < field[0].length; d++) {
+                System.out.print(strings[d] + " ");
+            }
             System.out.println("");
         }
 
