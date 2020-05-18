@@ -6,12 +6,21 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.awt.event.*;
+import java.util.ArrayList;
 
 
-public class Start {
+public class Start extends Main {
+    static String input;
+    static ArrayList<String>GUIDeck;
+
     public static void main(String args[]){
         //SOS (Solitaire on Steriods)
 
+            GUIDeck = deckOut();
+            //ImageIcon deckCards = new ImageIcon("Desktop//13HR.png");
+
+        System.out.println(GUIDeck);
         String musicLocation = "/Desktop/Music/Scary.wav";
 
         //musicStuff musicObject = new musicStuff();
@@ -37,6 +46,7 @@ public class Start {
    */
 
 
+
    /*RULES
    When one of the piles is gone, only a king can be moved to that open space
    All piles must have one FACE UP card
@@ -60,7 +70,7 @@ public class Start {
      textField.addActionListener(new ActionListener() {
                                      @Override
                                      public void actionPerformed(ActionEvent e) {
-                                         String input = textField.getText();
+                                         input = textField.getText();
                                          textAdder.setText(input);
 
                                      }
@@ -74,7 +84,30 @@ public class Start {
 
 
 
+           button.addActionListener(e->{
 
+
+
+               JFrame opener = new JFrame(input+" vs"+" AI");
+               JPanel panelC = new JPanel();
+               ImageIcon deckCards=
+               for(int x=0;x<GUIDeck.size();x++){
+                   deckCards = new ImageIcon();Start.class.getResource("Desktop//CSA Final Exam//13HR.png");
+                   JLabel deck = new JLabel(deckCards);
+                   panelC.add(deck);
+               }
+
+               //JLabel deck = new JLabel(deckCards);
+
+               //panelC.add(deck);
+                opener.add(panelC);
+
+                opener.setSize(300,300);
+                opener.setLocation(0,0);
+                opener.setVisible(true);
+
+
+                   });
 
 
 
@@ -92,9 +125,11 @@ public class Start {
              JPanel panel2 = new JPanel();
 
              JLabel setup = new JLabel("/*SETUP\n" +
-                     "   Seven piles...First rotation lays card to the very left up and the rest of the six down.\n" +
-                     "   Next place a card upright on the second pile and then the rest down\n" +
-                     "   Continue this until every pile has one face up card on the top\n" +
+                     "   Seven piles...First rotation lays card to the " +
+                     "very left up and the rest of the six down." +
+                     "   Next place a card upright on the second pile " +
+                     "and then the rest down" +
+                     "   Continue this until every pile has one face up card on the top" +
                      "   ");
 
             JLabel object = new JLabel("/*OBJECT:\n" +
@@ -103,9 +138,11 @@ public class Start {
                     "   ");
 
             JLabel gameplay = new JLabel("/*GAMEPLAY\n" +
-                    "   Cards can be transferred to other piles in the foundation if the card being transferred is one lower AND has a different color than the card that is placed on\n" +
-                    "   Cards can also be moved around from the pile...each card is placed on at at time and can either be placed onto the foundation or onto the ACE pile directly if possible.\n" +
-                    "   Cards");
+                    "   Cards can be transferred to other piles in the foundation if the card being transferred is one\n " +
+                    "lower AND has a different color than the card that is placed on\n" +
+                    "   Cards can also be moved around from the pile "
+
+                   );
 
 
             JLabel rules = new JLabel("/*RULES\n" +
@@ -123,9 +160,10 @@ public class Start {
             panel2.add(rules);
             panel2.setBackground(Color.PINK);
             instructor.add(panel2);
-            instructor.setSize(500,500);
+            instructor.setSize(1500,300);
+            instructor.setLocation(500,-500);
 
-            instructor.pack();
+
             instructor.setVisible(true);
 
 
