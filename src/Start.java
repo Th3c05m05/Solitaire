@@ -22,7 +22,7 @@ public class Start {
     public static void main(String args[]){
 
        Start obj = new Start();
-       obj.setUp();
+       setUp();
        Main humanControl = new Main();
        humanControl.checkInt();
 
@@ -76,7 +76,8 @@ public class Start {
                JPanel panelC = new JPanel();
                //ImageIcon deckCards;
 
-               for(int x=0;x<hand.size();x++){
+               for(int x=0;x<hand.size();x++){//YO ASIM YO ASIM this loops through the hand and displays it as gui
+                   //In general I have not been able to figure out how to put an image on a GUI in Intelij...please help
                    ImageIcon decker = new ImageIcon(Start.class.getResource("Solitaire//src//"+hand.get(x)+".png"));
                    JLabel labeler=new JLabel(decker);
                    panelC.add(labeler);
@@ -105,30 +106,33 @@ public class Start {
              JPanel panel2 = new JPanel();
 
              JLabel setup = new JLabel("/*SETUP\n" +
-                     "   Seven piles...First rotation lays card to the " +
-                     "very left up and the rest of the six down." +
-                     "   Next place a card upright on the second pile " +
-                     "and then the rest down" +
-                     "   Continue this until every pile has one face up card on the top" +
-                     "   ");
+                    "Your hand is given x amount of cards depending on what you input"+
+                     "The AI is given the same number of cards"+
+                     "A card that will continously be replaced will be present");
 
             JLabel object = new JLabel("/*OBJECT:\n" +
-                    "   The object of the game is to place cards on the ACE of a different suit\n" +
-                    "   THE GAME is won by transferring all remaining cards to the ACE pile\n" +
+                    "   The object of the game is to lose all of the cards in your deck\n" +
+                    "   THE GAME is won by transferring all of your cards into the pile\n" +
                     "   ");
 
             JLabel gameplay = new JLabel("/*GAMEPLAY\n" +
-                    "   Cards can be transferred to other piles in the foundation if the card being transferred is one\n " +
-                    "lower AND has a different color than the card that is placed on\n" +
-                    "   Cards can also be moved around from the pile "
+                    "   A card from your deck can be legally transferred to the pile if two cards are the same color and suite\n " +
+                    "A card  can also be removed from the hand if the card and pile card are the same number\n" +
+                    "   If neither hold true you have the option of drawing a card from the deck "+
+                    "For each card transferred to the pile you earn one point."+
+                    "If you choose to end the game early, the winner is determine by who has the highest number of points "+
+                    "Rules apply to the AI"
 
                    );
 
+            JLabel rules = new JLabel("Take your time to respond! If you enter an index out of nowhere, you will be asked to try again"+
+                    "But if you enter an index within the parameters, but that card fails to conform to the rules as described in the gameplay"+
+                    "A card will be added to your deck regardless"
 
-            JLabel rules = new JLabel("/*RULES\n" +
-                    "   When one of the piles is gone, only a king can be moved to that open space\n" +
-                    "   All piles must have one FACE UP card\n" +
-                    "   ");
+            );
+
+
+
 
 
 
@@ -137,7 +141,6 @@ public class Start {
             panel2.add(setup);
             panel2.add(object);
             panel2.add(gameplay);
-            panel2.add(rules);
             panel2.setBackground(Color.BLUE);
             instructor.add(panel2);
             instructor.setSize(1500,300);
