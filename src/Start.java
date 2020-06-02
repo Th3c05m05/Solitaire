@@ -78,7 +78,7 @@ public class Start {
 
                for(int x=0;x<hand.size();x++){//YO ASIM YO ASIM this loops through the hand and displays it as gui
                    //In general I have not been able to figure out how to put an image on a GUI in Intelij...please help
-                   ImageIcon decker = new ImageIcon(Start.class.getResource("Solitaire//src//"+hand.get(x)+".png"));
+                   ImageIcon decker = new ImageIcon(Start.class.getResource("Solitaire//src//png//"+hand.get(x)+".png"));
                    JLabel labeler=new JLabel(decker);
                    panelC.add(labeler);
 
@@ -125,9 +125,9 @@ public class Start {
 
                    );
 
-            JLabel rules = new JLabel("Take your time to respond! If you enter an index out of nowhere, you will be asked to try again"+
-                    "But if you enter an index within the parameters, but that card fails to conform to the rules as described in the gameplay"+
-                    "A card will be added to your deck regardless"
+            JLabel rules = new JLabel("Take your time to respond! If you enter an index you know is greater than the size of your hand, you will be asked to try again"+
+                    "Refrain from typing nonsense into the text field or else the program will break"
+
 
             );
 
