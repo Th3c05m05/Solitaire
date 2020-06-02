@@ -23,6 +23,10 @@ public class Start {
 
        Start obj = new Start();
        obj.setUp();
+       Main humanControl = new Main();
+       humanControl.checkInt();
+
+
 
         //System.out.println(GUIDeck);
         String musicLocation = "/Desktop/Music/Scary.wav";
@@ -134,7 +138,7 @@ public class Start {
             panel2.add(object);
             panel2.add(gameplay);
             panel2.add(rules);
-            panel2.setBackground(Color.PINK);
+            panel2.setBackground(Color.BLUE);
             instructor.add(panel2);
             instructor.setSize(1500,300);
             instructor.setLocation(500,-500);
@@ -157,7 +161,7 @@ public class Start {
         frame.setLocation(500,-500);
         //frame.pack();
         frame.setSize(400,400);
-            panel.setBackground(Color.PINK);
+            panel.setBackground(Color.BLUE);
         frame.add(panel);
 
      panel.add(label);
@@ -198,7 +202,6 @@ public class Start {
         deck.add("02SB");
         deck.add("01SB"); //ace
 
-        System.out.println("test");
 
         //Adds all the Clubs
         deck.add("13CB"); //king
@@ -292,7 +295,7 @@ public class Start {
 
     }
 
-    public static  void loopMusic(String musicLocation){
+    public static void loopMusic(String musicLocation){
 
         try{
 

@@ -1,8 +1,45 @@
-/*import java.util.*;
+import java.util.*;
 
-public class User{
+public class User extends Main {
 
-    //static Main main = new Main();
+    public void checkAI() {
+
+        ArrayList<String> reductionAI = new ArrayList<String>();
+
+        Random objGenerator = new Random();
+        int randomChose = 0;
+
+        int xx = objGenerator.nextInt(deck.size() - 1);
+        for (int x = 0; x < AI.size(); x++) {
+            if ((AI.get(x).substring(3, 4).equals(piler.get(piler.size() - 1).substring(3, 4))) && AI.get(x).substring(2, 3).equals(piler.get(x).substring(2, 3))) {
+
+                reductionAI.add(AI.get(x));
+
+
+            } else if (Integer.parseInt(AI.get(x).substring(0, 2)) == Integer.parseInt(piler.get(piler.size() - 1).substring(0, 2))) {
+
+                reductionAI.add(AI.get(x));
+
+
+            }
+
+
+            else{
+                AI.add(deck.get(0));
+                deck.remove(deck.get(0));
+            }
+
+
+        }
+
+        randomChose = objGenerator.nextInt(reductionAI.size() - 1);
+
+        AI.remove(reductionAI.get(randomChose));
+        piler.add(reductionAI.get(randomChose));
+        //System.out.println(reductionAI.get(randomChose));
+        System.out.println("This is the AI set:"+AI);
+
+    /*static Main main = new Main();
     static Scanner input = new Scanner(System.in);
     static int c1length = 0;
     static int c2length = 0;
@@ -110,5 +147,7 @@ public class User{
             default:
                 return 0;
         }
+    }*/
+
     }
-}*/
+}
