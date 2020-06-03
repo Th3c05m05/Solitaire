@@ -12,6 +12,7 @@ public class Main extends Start {
         deck.remove(deck.get(0));
 
         int x = 0;
+        int y =0;
 
 
         Main obj = new Main();
@@ -56,6 +57,7 @@ public class Main extends Start {
                         piler.add(reductionAI.get(randomChose));
                         System.out.println("This is the AI set: " + AI);
                         reductionAI.clear();
+                        y++;
                     } else {
                         randomChose = objGenerator.nextInt(reductionAI.size() - 1);
 
@@ -64,6 +66,7 @@ public class Main extends Start {
                         //System.out.println(reductionAI.get(randomChose));
                         System.out.println("This is the AI set:" + AI);
                         reductionAI.clear();
+                        y++;
                     }
                 }
                 if (AI.size() == 1) {
@@ -75,14 +78,34 @@ public class Main extends Start {
                 }
 
             }
-
-            //obj.checkAI();
             else if (index == -5) {
                 System.out.println("Your final score was: " + x);
+                System.out.println("The AI score was:"+y);
+                if(x>y){
+                    System.out.println("You won");
+                }
+                else if(x<y){
+                    System.out.println("The AI was too smart!");
+
+                }
+                else if(x==y){
+                    System.out.println("It was a tie");
+                }
                 System.exit(0);
-            } else if ((hand.get(index).substring(3, 4).equals(piler.get(piler.size() - 1).substring(3, 4))) && hand.get(index).substring(2, 3).equals(piler.get(piler.size() - 1).substring(2, 3))) {
+            }
+
+            //obj.checkAI();
+            else if ((hand.get(index).substring(3, 4).equals(piler.get(piler.size() - 1).substring(3, 4))) && hand.get(index).substring(2, 3).equals(piler.get(piler.size() - 1).substring(2, 3))) {
                 piler.add(hand.get(index));
                 hand.remove(hand.get(index));
+                if(hand.size()==1){
+                    System.out.println("USER HAS UNO!");
+
+                }
+                if(hand.size()==0){
+                    System.out.println("USER HAS WON!");
+                    System.exit(0);
+                }
                 x++;
                 for (int r = 0; r < AI.size(); r++) {
                     if ((AI.get(r).substring(3, 4).equals(piler.get(piler.size() - 1).substring(3, 4))) && (AI.get(r).substring(2, 3).equals(piler.get(piler.size() - 1).substring(2, 3)))) {
@@ -112,6 +135,7 @@ public class Main extends Start {
                         piler.add(reductionAI.get(randomChose));
                         System.out.println("This is the AI set: " + AI);
                         reductionAI.clear();
+                        y++;
                     } else {
                         randomChose = objGenerator.nextInt(reductionAI.size() - 1);
 
@@ -120,6 +144,7 @@ public class Main extends Start {
                         //System.out.println(reductionAI.get(randomChose));
                         System.out.println("This is the AI set:" + AI);
                         reductionAI.clear();
+                        y++;
                     }
                 }
                 if (AI.size() == 1) {
@@ -137,6 +162,14 @@ public class Main extends Start {
                 piler.add(hand.get(index));
                 hand.remove(hand.get(index));
                 x++;
+                if(hand.size()==1){
+                    System.out.println("USER HAS UNO!");
+
+                }
+                if(hand.size()==0){
+                    System.out.println("USER HAS WON!");
+                    System.exit(0);
+                }
                 for (int r = 0; r < AI.size(); r++) {
                     if ((AI.get(r).substring(3, 4).equals(piler.get(piler.size() - 1).substring(3, 4))) && (AI.get(r).substring(2, 3).equals(piler.get(piler.size() - 1).substring(2, 3)))) {
 
@@ -166,6 +199,7 @@ public class Main extends Start {
                         piler.add(reductionAI.get(randomChose));
                         System.out.println("This is the AI set: " + AI);
                         reductionAI.clear();
+                        y++;
                     } else {
                         randomChose = objGenerator.nextInt(reductionAI.size() - 1);
 
@@ -174,6 +208,7 @@ public class Main extends Start {
                         //System.out.println(reductionAI.get(randomChose));
                         System.out.println("This is the AI set:" + AI);
                         reductionAI.clear();
+                        y++;
 
                     }
                 }
@@ -186,6 +221,7 @@ public class Main extends Start {
                 }
 
                 //obj.checkAI();
+
 
 
             } else {
